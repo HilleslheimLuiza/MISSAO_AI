@@ -1,13 +1,13 @@
 :root{
-    --cor-de-fundo:#360e77;
-    --cor-principal: #0b0d20;
-    --cor-secundaria: #212333;
-    --cor-destaque: #2bdefd;
-    --cor-texto: #ffffff;
+    --cor-fundo: #000000;
+    --cor-principal: #330d0d ;
+    --cor-secundaria: #570606;
+    --cor-destaque: #270404;
+    --cor-texto: #D7F9FF;
 }
 
 body{
-    background-color: var(--cor-de-fundo);
+    background-color: var(--cor-fundo);
     color: var(--cor-texto);
     display: flex;
     justify-content: center;
@@ -32,6 +32,7 @@ button{
     color: var(--cor-texto);
     border: none;
     border-radius: 15px;
+    padding: 15px;
     transition: background-color 0.3s;
 }
 
