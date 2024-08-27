@@ -42,6 +42,12 @@ let perguntaAtual;
 let historiafinal = "";
 
 function mostraPergunta(){
+if(atual>= perguntas.length){ 
+    mostraResultado();
+    return;
+}
+
+
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent="";
@@ -58,10 +64,16 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionda(opcaoSelecionada){
-    const afirmacao = opcaoSelecionada.afirmacao;
-    historiafinal = afirmacao;
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiafinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
+}
+
+function mostraResultado(){
+    caixaPerguntas.textContent = "VAI CORINTHIAS";
+    textoResultado.textContent = historiafinal
+    caixaAlternativas.textContent = "";
 }
 
 mostraPergunta();
